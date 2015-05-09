@@ -22,16 +22,12 @@ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB8
 curl -sSL https://rvm.io/mpapis.asc | gpg --import -
 sudo curl -sSL https://rvm.io/mpapis.asc | gpg --import -
 
-
-
 # basic update
 sudo apt-get -y --force-yes update
 sudo apt-get -y --force-yes upgrade
 
-
 # install apps
 sudo apt-get -y install libxss1 sublime-text-installer git gitk gitg virtualbox virtualbox-guest-additions-iso filezilla dropbox skype btsync-user gimp p7zip p7zip-full p7zip-rar unity-tweak-tool indicator-multiload curl gparted dkms google-chrome-stable google-talkplugin php5-cli php5-common php5-mcrypt php5-sqlite php5-curl php5-json phpunit mcrypt ssmtp mailutils mpack truecrypt nautilus-open-terminal google-talkplugin linux-headers-generic build-essential tp-smapi-dkms moc variety curl zsh pastebinit ntfs-config checkinstall cdbs devscripts dh-make fakeroot libxml-parser-perl check vlc libav-tools flac faac faad sox ffmpeg2theora libmpeg2-4 uudeview mpeg3-utils mpegdemux liba52-dev mpeg2dec vorbis-tools id3v2 mpg321 mpg123 libflac++6 totem-mozilla icedax  lame libmad0 libjpeg-progs ubuntu-restricted-extras gstreamer0.10-plugins-ugly gxine libdvdread4 totem-mozilla icedax tagtool easytag id3tool lame nautilus-script-audio-convert libmad0 mpg321 libavcodec-extra compiz compizconfig-settings-manager compiz-plugins bleachbit python-pip guake feh htop mlocate orage lm-sensors
-
 
 # folders
 rm -rf ~/Documents
@@ -43,14 +39,17 @@ rm ~/examples.desktop
 mkdir ~/Development
 mkdir ~/BTSync
 
-# requires clicks
-sudo apt-get install -y ubuntu-restricted-extras
+#git settings
+git config --global push.default simple
+git config --global user.name "Ankur Singh"
+git config --global user.email "ankur13019@iiitd.ac.in"
 
 #ruby and rails
 curl -L https://get.rvm.io | bash -s stable --ruby
 source ~/.rvm/scripts/rvm
 curl -sL https://deb.nodesource.com/setup | sudo bash -
 sudo apt-get install -y nodejs
+
 rvm get stable --autolibs=enable
 rvm install ruby
 rvm install 2.2.1
@@ -74,7 +73,7 @@ gem install rhc
 
 #zsh
 wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
-echo "plugins=(rails git ruby)" > ~/.zshrc
+echo "plugins=(rails sublime web-search github rand-quote git ruby)" > ~/.zshrc
 echo 'DEFAULT_USER="ankur"' > ~/.zshrc
 echo "chuck_cow" > ~/.zshrc
 
@@ -85,6 +84,9 @@ sudo wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 wget -c media.steampowered.com/client/installer/steam.deb
 sudo dpkg -i steam.deb
 sudo apt-get install -f
+
+# requires clicks
+sudo apt-get install -y ubuntu-restricted-extras
 
 
 ##Cleanup time ############################################
