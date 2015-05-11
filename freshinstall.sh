@@ -73,9 +73,9 @@ gem install rhc
 
 #zsh
 wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
-echo "plugins=(rails sublime web-search github rand-quote git ruby)" > ~/.zshrc
-echo 'DEFAULT_USER="ankur"' > ~/.zshrc
-echo "chuck_cow" > ~/.zshrc
+echo "plugins=(rails sublime web-search github rand-quote git ruby)" >> ~/.zshrc
+echo 'DEFAULT_USER="ankur"' >> ~/.zshrc
+echo "chuck_cow" >> ~/.zshrc
 
 #heroku toolbelt
 sudo wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
