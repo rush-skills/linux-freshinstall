@@ -1,6 +1,6 @@
 # linux-freshinstall
 Script to run on ubuntu/ubuntu based operating systems to do a fresh install of useful apps.
-
+tested on linux mint 17.1 with cinnamon/xfce.
 installs the following:
 
 using apt-get
@@ -67,3 +67,22 @@ installs steam using .deb file
 
 installs mysql
 
+Contributions are welcome. Fork and send a pull-request.
+
+Use the issue tracker for suggestions and bugs.
+
+TODO:
+
+Dynamic script to choose what you want.
+Add more software.
+Support more frameworks etc.
+IMPROVE README
+Test and fix for different versions of ubuntu
+Add more configuration options for zsh
+add sublime text plugins and install package control anokknd few common plugins
+and more zsh configuration
+fix ubuntu basic settings like default apps,power usage and control etc.
+auto detect and install drivers
+
+TESTING:
+TODO: Find a way to efficiently test a script. VMs might help.

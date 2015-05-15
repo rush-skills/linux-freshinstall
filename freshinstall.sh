@@ -60,20 +60,11 @@ rvm install 2.1.0
 rvm --default use ruby-2.2.1
 gem update --system
 echo "gem: --no-document --no-ri --no-rdoc" >> ~/.gemrc
-gem install bundler
-gem install nokogiri
-gem install rails
-gem install annotate
-gem install flay
-gem install lol_dba
-gem install jazz_hands
-gem install zeus
-gem install hub
-gem install rhc
+gem install bundler nokogiri rails annotate flay lol_dba jazz_hands zeus hub rhc
 
 #zsh
 wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
-echo "plugins=(rails sublime web-search github rand-quote git ruby)" >> ~/.zshrc
+echo "plugins=(rails sublime web-search chucknorris github rand-quote git ruby)" >> ~/.zshrc
 echo 'DEFAULT_USER="ankur"' >> ~/.zshrc
 echo "chuck_cow" >> ~/.zshrc
 
