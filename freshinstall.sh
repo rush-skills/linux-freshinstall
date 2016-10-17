@@ -29,6 +29,17 @@ sudo apt-get -y --force-yes upgrade
 # install apps
 sudo apt-get -y install libxss1 sublime-text-installer git gitk gitg virtualbox virtualbox-guest-additions-iso filezilla dropbox skype btsync-user gimp p7zip p7zip-full p7zip-rar unity-tweak-tool indicator-multiload curl gparted dkms google-chrome-stable google-talkplugin php5-cli php5-common php5-mcrypt php5-sqlite php5-curl php5-json phpunit mcrypt ssmtp mailutils mpack truecrypt nautilus-open-terminal google-talkplugin linux-headers-generic build-essential tp-smapi-dkms moc variety curl zsh pastebinit ntfs-config checkinstall cdbs devscripts dh-make fakeroot libxml-parser-perl check vlc libav-tools flac faac faad sox ffmpeg2theora libmpeg2-4 uudeview mpeg3-utils mpegdemux liba52-dev mpeg2dec vorbis-tools id3v2 mpg321 mpg123 libflac++6 totem-mozilla icedax  lame libmad0 libjpeg-progs ubuntu-restricted-extras gstreamer0.10-plugins-ugly gxine libdvdread4 totem-mozilla icedax tagtool easytag id3tool lame nautilus-script-audio-convert libmad0 mpg321 libavcodec-extra compiz compizconfig-settings-manager compiz-plugins bleachbit python-pip guake feh htop mlocate orage lm-sensors 
 
+# install docker
+sudo apt-get -y install docker.io
+ln -sf /usr/bin/docker.io /usr/local/bin/docker
+sed -i '$acomplete -F _docker docker' /etc/bash_completion.d/docker.io
+update-rc.d docker.io defaults
+
+# Downloading a docker container
+docker pull ubuntu
+
+# Run the docker container with docker run -i -t ubuntu /bin/bash
+
 # folders
 rm -rf ~/Documents
 rm -rf ~/Public
