@@ -93,8 +93,8 @@ sudo apt-get install -y ubuntu-restricted-extras mysql-server libmysqlclient-dev
 ##Cleanup time ############################################
     echo "Cleaning up packages..."
     sleep 1s
-    sudo apt-get autoclean
-    sudo apt-get autoremove
+    sudo apt-get autoclean -y
+    sudo apt-get autoremove -y
     sudo apt-get update
     echo ""
     echo "Packages cleaned up..."
